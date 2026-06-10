@@ -170,6 +170,7 @@ export default function CartSidebar({
                           id={`cart-item-${item.menuItem.id}`}
                         >
                           <div className="flex gap-3 justify-between">
+                            <div className="flex gap-2.5">
                               {/* Small thumb image container */}
                               <div className="w-11 h-11 rounded-xl overflow-hidden flex-shrink-0 flex items-center justify-center border border-stone-100">
                                 <img src={item.menuItem.image} alt={item.menuItem.name} className="w-full h-full object-cover" />

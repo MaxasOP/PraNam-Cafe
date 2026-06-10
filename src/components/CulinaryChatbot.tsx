@@ -94,14 +94,14 @@ export default function CulinaryChatbot() {
             initial={{ opacity: 0, y: 50, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 50, scale: 0.9 }}
-            className="w-[92vw] sm:w-[410px] h-[550px] bg-brand-ivory rounded-3xl overflow-hidden shadow-2xl border border-brand-gold/20 flex flex-col mb-4 glow-gold"
+            className="w-[92vw] sm:w-[410px] h-[500px] sm:h-[550px] max-h-[80vh] bg-brand-ivory rounded-3xl overflow-hidden shadow-2xl border border-brand-gold/20 flex flex-col mb-4 glow-gold"
             id="chat-window"
           >
             {/* Header */}
             <div className="bg-brand-blue-dark text-white p-5 flex items-center justify-between border-b border-brand-gold/35">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-brand-gold flex items-center justify-center border border-white/20">
-                  <Sparkles className="w-5 h-5 text-white animate-pulse" />
+                  <Sparkles className="w-5 h-5 text-white animate-pulse" strokeWidth={1.2} />
                 </div>
                 <div>
                   <h3 className="font-serif text-sm font-bold tracking-wider text-brand-beige">Saras · Culinary Host</h3>
@@ -117,7 +117,7 @@ export default function CulinaryChatbot() {
                 className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors cursor-pointer"
                 id="close-chat-btn-top"
               >
-                <X className="w-4 h-4" />
+                <X className="w-4 h-4" strokeWidth={1.2} />
               </button>
             </div>
 
@@ -193,7 +193,7 @@ export default function CulinaryChatbot() {
                   className="flex-shrink-0 bg-white hover:bg-brand-gold/5 border border-brand-gold/22 px-3 py-1.5 rounded-full text-[10px] font-sans font-medium text-brand-gold transition-colors cursor-pointer flex items-center gap-1 shadow-xs"
                   id={`starter-prompt-${pIdx}`}
                 >
-                  <HelpCircle className="w-3 h-3" />
+                  <HelpCircle className="w-3 h-3" strokeWidth={1.2} />
                   {prompt.short}
                 </button>
               ))}
@@ -221,7 +221,7 @@ export default function CulinaryChatbot() {
                 className="w-10 h-10 rounded-xl bg-brand-gold text-white flex items-center justify-center hover:bg-brand-gold-light transition-colors cursor-pointer disabled:opacity-40"
                 id="send-chat-message"
               >
-                <Send className="w-4 h-4" />
+                <Send className="w-4 h-4" strokeWidth={1.2} />
               </button>
             </div>
           </motion.div>
@@ -236,7 +236,7 @@ export default function CulinaryChatbot() {
         className="w-14 h-14 rounded-full bg-brand-gold text-white flex items-center justify-center shadow-2xl cursor-pointer hover:bg-brand-gold-light transition-colors z-50 ring-4 ring-white/30 border-2 border-brand-gold"
         id="chat-launcher-btn"
       >
-        <MessageSquare className="w-6.5 h-6.5" />
+        <MessageSquare className="w-6.5 h-6.5" strokeWidth={1.2} />
       </motion.button>
     </div>
   );

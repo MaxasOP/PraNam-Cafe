@@ -155,6 +155,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-brand-ivory text-stone-900 font-sans selection:bg-brand-blue/25 selection:text-brand-blue relative">
+      <div className="noise-overlay" />
       
       {/* Background Ornate Graphic Lines */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-brand-gold/5 rounded-full blur-3xl pointer-events-none" />
@@ -194,7 +195,7 @@ export default function App() {
             {/* Quick scanning simulated info */}
             <div className="bg-white/5 border border-brand-gold/30 rounded-2xl p-4 flex items-center gap-4 dark-glass">
               <div className="w-12 h-12 bg-brand-gold/10 rounded-xl flex items-center justify-center text-brand-gold border border-brand-gold/20">
-                <MapPin className="w-6 h-6" />
+                <MapPin className="w-6 h-6" strokeWidth={1.2} />
               </div>
               <div>
                 <p className="text-[10px] font-mono tracking-wider text-brand-gold uppercase font-bold">
@@ -426,7 +427,7 @@ export default function App() {
           id="cart-floating-launcher"
         >
           <div className="relative">
-            <ShoppingBag className="w-6.5 h-6.5" />
+            <ShoppingBag className="w-6.5 h-6.5" strokeWidth={1.2} />
             <span className="absolute -top-2.5 -right-2.5 bg-brand-gold text-white font-sans font-bold text-[10px] w-5 h-5 rounded-full flex items-center justify-center border-2 border-brand-blue animate-bounce">
               {cartTotalQty}
             </span>
